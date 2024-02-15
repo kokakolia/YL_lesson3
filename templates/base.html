@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> {{name}} </title>
+    <title> Заголовок </title>
 </head>
 <body>
     <h1>Миссия Колонизация Марса</h1>
     <h4>И на Марсе будут яблони цвести!</h4>
+    {% if val == "ul" %}
+        <ul>
+            {% for name in list_prof %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    {% elif val == "ol" %}
+        <ol>
+            {% for name in list_prof %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ol>
+    {% endif %}
 </body>
 </html>
